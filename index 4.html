@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Boost Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      color: #fff;
+      line-height: 1.6;
+    }
+    header {
+      background: rgba(0, 0, 0, 0.4);
+      padding: 1rem 2rem;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffe600;
+    }
+    .container {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .card {
+      background: rgba(255,255,255,0.1);
+      border-radius: 15px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s, background 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.03);
+      background: rgba(255,255,255,0.15);
+    }
+    .card h2 {
+      color: #ffe600;
+      margin-bottom: 1rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: rgba(0, 0, 0, 0.3);
+      position: sticky;
+      bottom: 0;
+    }
+    .btn {
+      background: #ffe600;
+      color: #000;
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #fff300;
+    }
+    .markdown-content {
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 1rem;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+    form {
+      margin-top: 2rem;
+      background: rgba(255,255,255,0.1);
+      padding: 1rem;
+      border-radius: 15px;
+    }
+    input, textarea {
+      width: 100%;
+      margin: 0.5rem 0;
+      padding: 0.75rem;
+      border-radius: 8px;
+      border: none;
+      font-size: 1rem;
+    }
+    input[type="submit"] {
+      background: #ffe600;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header class="animate__animated animate__fadeInDown">
+    <h1>AI Boost Hub</h1>
+    <nav>
+      <a href="#tools">Top Tools</a>
+      <a href="#tips">Productivity Hacks</a>
+      <a href="#earn">Monetize</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <section class="card animate__animated animate__fadeInUp" id="tools">
+      <h2>🔥 Top Free AI Tools</h2>
+      <p>Discover free, powerful AI tools like <strong>ChatGPT</strong>, <strong>Jasper</strong>, <strong>Notion AI</strong>, and more. These tools can help automate writing, coding, task planning, and even customer service.</p>
+      <a href="#" class="btn">Try Jasper Free</a>
+    </section>
+
+    <section class="card animate__animated animate__fadeInUp" id="tips">
+      <h2>🚀 Productivity Hacks with AI</h2>
+      <div id="markdown-post" class="markdown-content"></div>
+      <script>
+        const markdown = `### Example Hack\nUse **Notion AI** to summarize your meetings and turn them into bullet action items automatically.`;
+        document.getElementById("markdown-post").innerHTML = marked.parse(markdown);
+      </script>
+      <a href="#" class="btn">Read Full Guide</a>
+    </section>
+
+    <section class="card animate__animated animate__fadeInUp" id="earn">
+      <h2>💰 How to Monetize Your Workflow</h2>
+      <p>Turn your AI-enhanced skills into income. Use affiliate programs, create digital products, or offer freelance services powered by AI efficiency.</p>
+      <a href="#" class="btn">Start Earning</a>
+    </section>
+
+    <section class="card animate__animated animate__fadeInUp" id="contact">
+      <h2>📬 Get in Touch</h2>
+      <form action="https://formspree.io/f/yourformid" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <input type="submit" value="Send Message">
+      </form>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 AI Boost Hub. All rights reserved.
+  </footer>
+
+  <!-- Google Analytics (optional - replace 'YOUR-ID') -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR-ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'YOUR-ID');
+  </script>
+</body>
+</html>
